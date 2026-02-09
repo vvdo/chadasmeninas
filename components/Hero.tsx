@@ -1,0 +1,49 @@
+﻿import Reveal from "@/components/Reveal";
+import LogoBadge from "@/components/LogoBadge";
+
+export default function Hero() {
+  return (
+    <section id="inicio" className="relative overflow-hidden scroll-mt-24">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.7),_transparent_65%)]" />
+      <Reveal className="relative mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 py-20 text-center sm:py-24">
+        <div className="flex flex-col items-center gap-6">
+          <div className="relative">
+            <div className="absolute -inset-10 rounded-full bg-white/70 blur-3xl" />
+            <LogoBadge
+              sizeClass="w-56 sm:w-72 lg:w-80"
+              className="relative drop-soft"
+              priority
+            />
+          </div>
+
+          <div className="flex flex-col items-center gap-3">
+            <h1 className="font-display text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-rose via-lavender to-aqua sm:text-6xl">
+              Chá das Meninas
+            </h1>
+            <p className="max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
+              Uma noite especial em clima Flash Back – Anos 70 & 80
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center gap-3 sm:flex-row">
+            <div className="rounded-full border border-lilac/70 bg-white/85 px-6 py-2 text-sm font-semibold text-ink shadow-soft">
+              15 de fevereiro de 2026
+            </div>
+            <div className="rounded-full border border-aqua/70 bg-white/85 px-6 py-2 text-sm font-semibold text-ink shadow-soft">
+              16:00
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-rose">
+            <span className="rounded-full border border-rose/70 bg-white/85 px-4 py-2">
+              Flash Back
+            </span>
+            <span className="rounded-full border border-sun/70 bg-white/85 px-4 py-2">
+              Anos 70 & 80
+            </span>
+          </div>
+        </div>
+      </Reveal>
+    </section>
+  );
+}

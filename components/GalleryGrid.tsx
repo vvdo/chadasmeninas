@@ -31,6 +31,7 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
         }
 
         const src = item as string;
+        const isRemote = src.startsWith("http");
 
         return (
           <Reveal
@@ -39,13 +40,23 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
             className="group flex h-full flex-col rounded-[28px] border border-line/80 bg-white/85 p-4 shadow-soft"
           >
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-cream/80">
-              <Image
-                src={src}
-                alt={`Memória do Chá ${index + 1}`}
-                fill
-                sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 100vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+              {isRemote ? (
+                <img
+                  src={src}
+                  alt={`Memória do Chá ${index + 1}`}
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              ) : (
+                <Image
+                  src={src}
+                  alt={`Memória do Chá ${index + 1}`}
+                  fill
+                  sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 100vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              )}
             </div>
           </Reveal>
         );

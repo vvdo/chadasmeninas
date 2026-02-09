@@ -30,7 +30,7 @@ export default function Section({
   children,
 }: SectionProps) {
   const containerClasses = [
-    "mx-auto flex w-full max-w-5xl flex-col gap-8",
+    "relative z-10 mx-auto flex w-full max-w-5xl flex-col gap-8",
     alignments[align],
     surface
       ? "rounded-[32px] border border-line/70 bg-white/75 px-6 py-10 shadow-soft backdrop-blur sm:px-10"

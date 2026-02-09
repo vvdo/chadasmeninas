@@ -1,14 +1,43 @@
 ﻿import Reveal from "@/components/Reveal";
 import LogoBadge from "@/components/LogoBadge";
+import DecorativeImage from "@/components/DecorativeImage";
 
 export default function Hero() {
   return (
     <section id="inicio" className="relative overflow-hidden scroll-mt-24">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.7),_transparent_65%)]" />
-      <Reveal className="relative mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 py-20 text-center sm:py-24">
+      <DecorativeImage
+        src="/logos/arabesco1.png"
+        position="-left-12 top-16"
+        size="h-36 w-36 sm:h-52 sm:w-52"
+        opacity={0.12}
+        className="hidden md:block"
+      />
+      <DecorativeImage
+        src="/logos/arabesco2.png"
+        position="-right-16 bottom-6"
+        size="h-40 w-40 sm:h-56 sm:w-56"
+        opacity={0.1}
+        className="hidden md:block [transform:scaleX(-1)]"
+      />
+      <DecorativeImage
+        src="/logos/borboleta1.png"
+        position="right-10 top-40"
+        size="h-10 w-10 sm:h-14 sm:w-14"
+        opacity={0.18}
+        className="hidden sm:block animate-float-slow"
+      />
+      <Reveal className="relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 py-20 text-center sm:py-24">
         <div className="flex flex-col items-center gap-6">
           <div className="relative">
             <div className="absolute -inset-10 rounded-full bg-white/70 blur-3xl" />
+            <DecorativeImage
+              src="/logos/escrita.png"
+              position="-right-10 -top-10"
+              size="h-14 w-32 sm:h-20 sm:w-44"
+              opacity={0.3}
+              className="hidden sm:block"
+            />
             <LogoBadge
               sizeClass="w-56 sm:w-72 lg:w-80"
               className="relative drop-soft"

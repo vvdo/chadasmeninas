@@ -50,7 +50,7 @@ export default function Hero() {
               Chá das Meninas
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
-              Uma noite especial em clima Flash Back – Anos 70 & 80
+              Uma celebração especial em clima Flash Back
             </p>
           </div>
 
@@ -68,7 +68,7 @@ export default function Hero() {
               Flash Back
             </span>
             <span className="rounded-full border border-sun/70 bg-white/85 px-4 py-2">
-              Anos 70 & 80
+              Retrô
             </span>
           </div>
         </div>

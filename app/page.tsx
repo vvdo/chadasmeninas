@@ -237,7 +237,7 @@ export default async function Home() {
         <Section
           id="tema"
           eyebrow="Tema Flash Back"
-          title="Anos 70 & 80"
+          title="Clima Retrô"
           description="Uma viagem no tempo com músicas, cores e alegria que marcaram gerações."
           align="left"
           className="overflow-hidden"
@@ -272,10 +272,10 @@ export default async function Home() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="rounded-full border border-rose/70 bg-white/85 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-ink">
-                  Anos 70
+                  Retrô
                 </span>
                 <span className="rounded-full border border-aqua/70 bg-white/85 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-ink">
-                  Anos 80
+                  Nostalgia
                 </span>
                 <span className="rounded-full border border-lilac/70 bg-white/85 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-ink">
                   Flash Back

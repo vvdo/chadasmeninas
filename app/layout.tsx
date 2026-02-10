@@ -15,9 +15,9 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Chá das Meninas | Flash Back 70 & 80",
+  title: "Chá das Meninas | Flash Back",
   description:
-    "Site institucional do Chá das Meninas, encontro feminino cristão em clima Flash Back – Anos 70 e 80.",
+    "Site institucional do Chá das Meninas, encontro feminino cristão em clima Flash Back.",
 };
 
 export default function RootLayout({

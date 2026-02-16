@@ -14,7 +14,7 @@ import { fetchImageUrls } from "google-photos-album-image-url-fetch";
 
 export const runtime = "nodejs";
 
-const googleAlbumUrl = "https://photos.app.goo.gl/9GUDonGwBm9t7bMK8";
+const googleAlbumUrl = "https://photos.app.goo.gl/bau8fe6LazsD7UzK7";
 
 const experienceItems = [
   {

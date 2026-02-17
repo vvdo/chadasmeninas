@@ -1,6 +1,4 @@
-﻿import { readdirSync } from "fs";
-import path from "path";
-import DecorativeDivider from "@/components/DecorativeDivider";
+﻿import DecorativeDivider from "@/components/DecorativeDivider";
 import DecorativeImage from "@/components/DecorativeImage";
 import GalleryGrid from "@/components/GalleryGrid";
 import Hero from "@/components/Hero";
@@ -15,6 +13,13 @@ import { fetchImageUrls } from "google-photos-album-image-url-fetch";
 export const runtime = "nodejs";
 
 const googleAlbumUrl = "https://photos.app.goo.gl/bau8fe6LazsD7UzK7";
+
+const galleryImages = [
+  "/galeria/foto1.jpeg",
+  "/galeria/foto2.jpeg",
+  "/galeria/foto3.jpeg",
+];
+
 
 const experienceItems = [
   {
@@ -44,8 +49,6 @@ const experienceItems = [
   },
 ];
 
-const galleryImages = getGalleryImages();
-
 async function getGoogleAlbumImages(limit = 6) {
   try {
     const images = await fetchImageUrls(googleAlbumUrl);
@@ -59,23 +62,10 @@ async function getGoogleAlbumImages(limit = 6) {
   }
 }
 
-function getGalleryImages() {
-  const galleryPath = path.join(process.cwd(), "public", "galeria");
-
-  try {
-    return readdirSync(galleryPath)
-      .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
-      .sort((a, b) => a.localeCompare(b))
-      .map((file) => `/galeria/${file}`);
-  } catch {
-    return [];
-  }
-}
-
 export default async function Home() {
   const googleAlbumImages = await getGoogleAlbumImages(6);
   const galleryPreviewImages = (
-    googleAlbumImages.length > 0 ? googleAlbumImages : galleryImages
+    galleryImages.length > 0 ? galleryImages : googleAlbumImages
   ).slice(0, 6);
 
   return (
